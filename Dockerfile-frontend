@@ -1,0 +1,15 @@
+FROM node:latest
+
+RUN npm install connect && npm install express && npm install node-static
+
+EXPOSE 8080
+
+COPY index.html /app/index.html
+
+COPY script.js /app/script.js
+
+COPY main.js /app/main.js
+
+WORKDIR /app
+
+CMD ["node","main.js"]
