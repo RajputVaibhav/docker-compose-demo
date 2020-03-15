@@ -21,7 +21,7 @@ services:
     networks:
       - front_tier
 
-
 networks:
   front_tier:
-    driver: bridge
+    external:
+      name: front_tier
